@@ -1,0 +1,42 @@
+/* Carousel Styling */
+.carousel-section {
+    text-align: center;
+    margin: 40px auto;
+    padding: 40px 0;
+    background: #f9f9f9;
+}
+
+.carousel-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.carousel-container {
+    position: relative;
+    width: 90%; /* Lățimea containerului mai largă pentru a adăuga mai mult spațiu */
+    margin: 0 auto;
+    overflow: hidden; /* Ascunde orice conținut care depășește containerul */
+    border-radius: 8px;
+}
+
+.carousel {
+    display: flex; /* Folosim flexbox pentru a aranja imaginile pe orizontală */
+    justify-content: space-between; /* Adăugăm spațiu între imagini */
+}
+
+.carousel-item {
+    flex: 0 0 auto; /* Imaginile își păstrează dimensiunea naturală */
+    margin-right: 15px; /* Spațiu între imagini */
+}
+
+.carousel-item:last-child {
+    margin-right: 0; /* Eliminăm marginile suplimentare pentru ultima imagine */
+}
+
+.carousel-item img {
+    width: 400px; /* Lățimea imaginilor și mai mari */
+    height: 300px; /* Înălțimea imaginilor și mai mari */
+    object-fit: cover; /* Imaginile vor fi decupate pentru a se potrivi proporțional */
+    border-radius: 8px; /* Colțuri rotunjite pentru un aspect mai estetic */
+}

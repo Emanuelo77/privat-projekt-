@@ -1,0 +1,60 @@
+#leistungen h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  #leistungen p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  #leistungen ul {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #leistungen ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #leistungen {
+    padding: 40px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 40px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  .gallery-button {
+    position: relative; /* Permite ajustarea poziției */
+    top: -1970px; /* Ridică butonul */
+    left: 99%; /* Mută butonul spre stânga */
+    transform: translateX(-50%); /* Centrare relativă pe noua poziție */
+    padding: 10px 15px;
+    background-color: #101110;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+ 
+  
+  
+  
+  
+  

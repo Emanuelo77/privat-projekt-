@@ -1,0 +1,80 @@
+
+header {
+    background: linear-gradient(45deg, #cfa73b, #6e6a6a, #8c8888, #333, #333);
+    background-size: 300% 300%;
+    color: rgb(240, 238, 238);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    box-shadow: 0 6px 10px rgb(234, 238, 240);
+    animation: gradientAnimation 10s ease infinite;
+}
+
+/* Logo-Styling */
+/* Logo Styling */
+/* Logo Styling */
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 0px;
+}
+
+.logo img {
+    width: 100px;  /* Setăm lățimea imaginii pentru a micșora logo-ul */
+    height: auto;   /* Menținem raportul corect al imaginii */
+    margin-bottom: 10px;  /* Poți ajusta acest spațiu între logo și text */
+}
+
+.logo h1 {
+    font-size: 1.2rem;  /* Diminuăm fontul pentru titlu pentru a se potrivi cu logo-ul */
+    text-align: center;
+}
+
+
+/* Container pentru text */
+#company-text {
+    color: #e8e2e2; /* Culoare text neagră */
+    text-align: left; /* Aliniere la stânga */
+    max-width: 600px; /* Lățime maximă pentru text */
+    font-size: 18px;
+    line-height: 1.6;
+    margin-left: 200px; /* Ajustează spațiul la stânga */
+    margin-right: auto; /* Asigură-te că textul rămâne centrat pe partea dreaptă */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%; /* Asigură-te că este suficient spațiu pentru alinierea verticală */
+}
+
+/* Flexbox pentru Header-Inhalt */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Stilizare suplimentară pentru paragrafe */
+#company-text p {
+    margin: 10px 0;
+}
+#company-text {
+    color: #003366; /* Culoare albastru închis */
+}
+
+/* Stilizare pentru #header pentru a ajusta layout-ul responsiv */
+@media (max-width: 768px) {
+    #header {
+        width: 90%; /* Lățimea se ajustează pe dispozitive mai mici */
+    }
+
+    #logo-container img {
+        width: 150px; /* Logo-ul se face mai mic pe dispozitive mici */
+    }
+
+    #company-text {
+        font-size: 16px; /* Font mai mic pe dispozitive mici */
+    }
+}

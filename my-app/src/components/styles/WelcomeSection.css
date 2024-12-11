@@ -1,0 +1,73 @@
+/* Container exterior pentru a organiza mai bine */
+#welcome {
+    display: flex;
+    justify-content: center;  /* Center content horizontally */
+    align-items: center;      /* Center content vertically */
+    height: auto;             /* Permite creșterea înălțimii pe măsură ce adaugi conținut */
+    background-color: #f7f7f7;
+    padding: 40px 15px;       /* Adaugă padding pentru o margine mai largă */
+}
+
+/* Secțiunea de bun venit */
+.welcome-section {
+    width: 80%;               /* Reduce lățimea pentru a crea un design mai compact */
+    max-width: 1000px;        /* Limitează lățimea maximă */
+    padding: 40px;            /* Spune mai mult spațiu în jurul conținutului */
+    background-color: #ffffff;
+    border-radius: 8px;       /* Colțuri rotunjite pentru un aspect mai rafinat */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);  /* Umbre mai delicate pentru un efect mai fin */
+    text-align: center;
+    margin-bottom: 30px;      /* Adaugă un spațiu între secțiune și alte elemente */
+}
+
+/* Stilizare pentru titlu */
+h2 {
+    font-size: 28px;          /* Reducere font pentru h2 */
+    color: #333333;
+    font-weight: bold;
+    margin-bottom: 20px;      /* Reducere margine pentru mai mult spațiu */
+}
+
+/* Stilizare pentru paragrafe */
+p {
+    font-size: 16px;          /* Reducere dimensiune text pentru paragrafe */
+    color: #555555;
+    line-height: 1.6;
+    margin-bottom: 15px;      /* Distanță între paragrafe */
+}
+
+/* Stilizarea pentru textul companiei */
+#company-text {
+    position: relative;
+    left: -5px;               /* Ajustare ușoară la stânga */
+    top: -5px;                /* Ajustare ușoară la sus */
+}
+
+/* Wrapper pentru conținutul din stânga și dreapta */
+.content-wrapper {
+    display: flex;
+    gap: 20px;                /* Reducere spațiu între secțiuni */
+    justify-content: space-between;
+    text-align: left;
+}
+
+/* Stilizarea pentru secțiunile din stânga și dreapta */
+.content-left, .content-right {
+    flex: 1;
+    padding: 20px;            /* Mai mult spațiu în interior pentru conținut */
+    background-color: #f4f4f4;
+    border-radius: 8px;       /* Colțuri mai puțin rotunjite pentru un aspect rafinat */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Umbre fine pentru mai multă subtilitate */
+}
+
+/* Media Queries pentru dispozitive mai mici */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;  /* Stivuire pe dispozitive mici */
+    }
+
+    .content-left, .content-right {
+        flex: 1 100%;            /* Asigură că fiecare secțiune ocupă 100% din lățime */
+        margin-bottom: 20px;     /* Adaugă un spațiu între secțiuni */
+    }
+}
