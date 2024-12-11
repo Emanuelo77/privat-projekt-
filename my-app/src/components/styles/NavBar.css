@@ -1,38 +1,49 @@
 /* Stiluri pentru navbar */
 nav {
-    display: flex;
-    justify-content: flex-end; /* Aliniază navbar-ul în partea dreaptă */
-    align-items: center; /* Centerază navbar-ul pe verticală */
-    position: relative;
-    margin-top: 20px; /* Adaugă un spațiu între navbar și partea de sus a paginii */
-  }
-  
-  /* Lista de navigare */
+  display: flex;
+  justify-content: center; /* Centerază navbar-ul pe orizontală */
+  align-items: center; /* Centerază navbar-ul pe verticală */
+  position: relative;
+  margin-top: 20px; /* Adaugă un spațiu între navbar și partea de sus a paginii */
+}
+
+/* Lista de navigare */
+nav ul {
+  list-style: none;
+  display: flex;  /* Elementele vor fi plasate pe orizontală */
+  gap: 20px;  /* Spațiu între fiecare item din navbar */
+  margin: 0;  /* Elimină marginile implicite */
+  padding: 0;  /* Elimină padding-ul implicit */
+}
+
+/* Stiluri pentru linkurile din navbar */
+nav ul li a {
+  padding: 10px 20px;
+  background-color: #101110;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(29, 21, 140, 0.778);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Stiluri pentru hover pe linkuri */
+nav ul li a:hover {
+  background-color: #333;
+  transform: scale(1.1);  /* Efect de mărire ușoară la hover */
+}
+
+/* Responsivitate pentru mobile */
+@media (max-width: 768px) {
   nav ul {
-    list-style: none;
-    display: flex;  /* Elementele vor fi plasate pe orizontală */
-    gap: 20px;  /* Spațiu între fiecare item din navbar */
-    margin: 0;  /* Elimină marginile implicite */
-    padding: 0;  /* Elimină padding-ul implicit */
-    justify-content: flex-end; /* Aliniază lista de linkuri la dreapta */
+    flex-direction: column;  /* Stivuiește elementele pe verticală la ecrane mici */
+    align-items: center;  /* Centerază item-urile pe axa orizontală */
   }
-  
-  /* Stiluri pentru linkurile din navbar */
+
   nav ul li a {
-    padding: 10px 20px;
-    background-color: #101110;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(29, 21, 140, 0.778);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1rem;  /* Mărimea fontului devine mai mică pe mobil */
+    padding: 12px 24px; /* Mărire mică a padding-ului */
   }
-  
-  /* Stiluri pentru hover pe linkuri */
-  nav ul li a:hover {
-    background-color: #333;
-    transform: scale(1.1);  /* Efect de mărire ușoară la hover */
-  }
-  
+}

@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Header from './components/Header';
-import WelcomeSection from './components/WelcomeSection';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import Carousel from './components/Carousel'; // Import the Carousel component
-import Leistungen from './components/Leistungen'; // Import the Leistungen component
-import Galerie from './components/Galerie'; // Import the Galerie component
+import WelcomeSection from './components/WelcomeSection';
+import Carousel from './components/Carousel';
+import Leistungen from './components/Leistungen';
+import Galerie from './components/Galerie';
+import AboutUs from './components/AboutUs'; // Importiere die AboutUs-Komponente
+import Contact from './components/Contact'; // Importiere die Contact-Komponente
 
 function App() {
   return (
@@ -14,19 +16,21 @@ function App() {
         <Header />
         <NavBar />
 
-        {/* Configuring routes */}
+        {/* Definiere die Routen */}
         <Routes>
           <Route 
             path="/" 
             element={
               <>
                 <WelcomeSection />
-                <Carousel /> {/* Display the carousel only on the homepage */}
+                <Carousel />
               </>
             } 
           />
-          <Route path="/leistungen" element={<Leistungen />} /> {/* Leistungen page */}
-          <Route path="/galerie" element={<Galerie />} /> {/* Galerie page */}
+          <Route path="/leistungen" element={<Leistungen />} />
+          <Route path="/galerie" element={<Galerie />} />
+          <Route path="/aboutus" element={<AboutUs />} /> {/* About Us Seite */}
+          <Route path="/contact" element={<Contact />} /> {/* Contact Seite */}
         </Routes>
 
         <Footer />

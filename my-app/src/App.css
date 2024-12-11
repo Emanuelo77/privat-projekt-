@@ -35,3 +35,48 @@ footer {
   padding: 20px;
   text-align: center;
 }
+/* Stiluri pentru navbar */
+nav {
+  display: flex;
+  justify-content: flex-start; /* Aliniază navbar-ul în partea stângă */
+  align-items: center; /* Centerază navbar-ul pe verticală */
+  position: relative;
+  margin-top: 20px; /* Adaugă un spațiu între navbar și partea de sus a paginii */
+}
+
+/* Lista de navigare */
+nav ul {
+  list-style: none;
+  display: flex;  /* Elementele vor fi plasate pe orizontală */
+  gap: 20px;  /* Spațiu între fiecare item din navbar */
+  margin: 0;  /* Elimină marginile implicite */
+  padding: 0;  /* Elimină padding-ul implicit */
+  justify-content: flex-start; /* Aliniază lista de linkuri la stânga */
+}
+
+/* Stiluri pentru linkurile din navbar */
+nav ul li a {
+  padding: 10px 20px; /* Ähnlich wie bei einem Button */
+  background-color: #101110; /* Hintergrundfarbe des Buttons */
+  color: white; /* Textfarbe */
+  text-decoration: none; /* Keine Unterstreichung */
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 5px; /* Abgerundete Ecken für Buttonform */
+  box-shadow: 0 4px 6px rgba(29, 21, 140, 0.778); /* Schattierung für Button */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* Damit der Link wie ein Button aussieht */
+  cursor: pointer; /* Hand-Cursor */
+}
+
+/* Stiluri pentru hover pe linkuri */
+nav ul li a:hover {
+  background-color: #333; /* Ändert die Hintergrundfarbe bei Hover */
+  transform: scale(1.1);  /* Leichtes Vergrößern beim Hover-Effekt */
+}
+
+/* Stiluri pentru focus pe linkuri */
+nav ul li a:focus {
+  outline: none; /* Entfernt die standardmäßige Umrandung bei Fokus */
+  box-shadow: 0 0 5px 2px rgba(46, 128, 200, 0.8); /* Setzt einen Fokus-Schatten */
+}

@@ -1,4 +1,4 @@
-import React from 'react';  // Import corect
+ // Import corect
 import './styles/Carousel.css'; // Importă fișierul CSS
 
 // Importă fișierele de imagini
