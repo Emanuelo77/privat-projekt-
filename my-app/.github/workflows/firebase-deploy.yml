@@ -39,5 +39,5 @@ jobs:
     - name: Deploy to Firebase
       uses: wzieba/Firebase-Deploy-Github-Action@v0.3.1
       with:
-        firebase_token:  ghp_yjZXT40nwgNx41GeFDQG8pn635fduk3w1p8E  # Acesta este tokenul pe care l-ai obținut
+        firebase_token:  1//033aSCzkAjV6ICgYIARAAGAMSNwF-L9IrgOvKfyducbkN0nvDcV0JbyQ9VfNqLyRSt2ed_tg8qsSO3m9jggqrulzJS3R_Eiw1Vck # Acesta este tokenul pe care l-ai obținut
         project_id: "project-5719524038184872764"  # ID-ul proiectului tău
