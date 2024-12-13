@@ -24,7 +24,7 @@ jobs:
         npm run build  # Dacă folosești React sau alt framework JS pentru a construi aplicația
 
     - name: Deploy to Firebase
-      uses: wzieba/Firebase-Deploy-Github-Action@v0.3.1
+      uses: firebase-actions/firebase-hosting-deploy@v0.2.0
       with:
-        firebase_token: ${{ secrets.FIREBASE_TOKEN }}  # Acesta este tokenul pe care l-ai obținut
-        project_id: "project-5719524038184872764"  # ID-ul proiectului tău
+        firebase_token: ${{ secrets.FIREBASE_TOKEN }}  # Acesta este tokenul pe care l-ai salvat î
+
