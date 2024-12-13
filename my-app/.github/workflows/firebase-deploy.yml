@@ -3,7 +3,7 @@ name: Firebase Deploy
 on:
   push:
     branches:
-      - main  # Acesta va rula workflow-ul atunci când faci un push pe ramura principală (main)
+      - main  # Workflow-ul va rula atunci când faci un push pe ramura principală
 
 jobs:
   deploy:
@@ -16,6 +16,19 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:
+        node-version: '16'  # Asigură-te că ai Node.js 16 sau o versiune mai recentă
+
+    - name: Install dependencies
+      run: |
+        npm install
+        npm run build  # Dacă folosești React sau alt framework JS pentru a construi aplicația
+
+    - name: Deploy to Firebase
+      uses: wzieba/Firebase-Deploy-Github-Action@v0.3.1
+      with:
+        firebase_token: ${{ secrets.FIREBASE_TOKEN }}  # Folosește secretul FIREBASE_TOKEN
+        project_id: "project-5719524038184872764"  # ID-ul proiectului tău
+
         node-version: '16'  # Asigură-te că ai Node.js 16 sau o versiune mai recentă
 
     - name: Install dependencies
