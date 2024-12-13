@@ -1,98 +1,115 @@
-/* Schriftart importieren */
+/* Importul fontului */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
-/* Header Stil */
+/* Header General */
 header {
-    background: linear-gradient(45deg, #cfa73b, #3587bd, #efecec, #f3f0f0, #333);
-    background-size: 300% 300%;
-    color: rgb(240, 238, 238);
-    display: flex;
-    justify-content: space-between; /* Abstand zwischen Logo und Text */
-    align-items: center;
-    padding: 30px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    animation: gradientAnimation 10s ease infinite;
-    font-family: 'Poppins', sans-serif;
+  background: linear-gradient(45deg, #cfa73b, #3587bd, #efecec, #f3f0f0, #333);
+  background-size: 300% 300%;
+  color: rgb(240, 238, 238);
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: gradientAnimation 10s ease infinite;
+  font-family: 'Poppins', sans-serif;
+  width: 100%;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Gradient Animation */
 @keyframes gradientAnimation {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
-/* Container für Logo */
+/* Container pentru logo */
 #logo-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 40px; /* Abstand zwischen Logo und Text */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 40px;
 }
 
-/* Stil für Logo */
+/* Logo Styling */
 .logo-image {
-    width: 300px; /* Größere Dimension für maximale Sichtbarkeit */
-    height: auto; /* Beibehaltung des Seitenverhältnisses */
-    border-radius: 20px; /* Abgerundete Ecken für einen modernen Look */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sanfter Schatten für besseren Kontrast */
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Stil für Text */
+/* Company Text Container */
 #company-text {
-    color: #003366; /* Elegantes Blau für den Text */
-    text-align: left;
-    max-width: 600px; /* Maximale Breite für den Text */
-    margin: 0 auto; /* Zentriert den Text */
-    font-size: 1.5rem;
-    line-height: 2; /* Erhöhter Zeilenabstand für bessere Lesbarkeit */
+  flex: 2;
+  max-width: 600px;
+  text-align: left;
+  color: #003366;
+  line-height: 1.6;
 }
 
 #company-text h1 {
-    font-size: 3rem; /* Große Schriftgröße für den Titel */
-    color: #002d62; /* Dunkelblau für den Titel */
-    margin-bottom: 15px; /* Abstand unter dem Titel */
+  font-size: 3rem;
+  color: #002d62;
+  margin-bottom: 15px;
 }
 
 #company-text p {
-    margin: 10px 0; /* Abstand zwischen den Absätzen */
-    font-size: 1.2rem; /* Textgröße für den normalen Text */
-    color: #003366; /* Konsistente Textfarbe */
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #003366;
 }
 
-/* Flexbox für den Header-Inhalt */
-.header-content {
-    display: flex;
-    justify-content: space-between; /* Abstand zwischen Logo und Text */
-    align-items: center;
-    width: 100%;
+/* Responsive Styling for Tablets and Phones */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column; /* Elemente stivuite vertical */
+    text-align: center; /* Centrare pe tablete */
+    padding: 20px;
+  }
+
+  #logo-container {
+    margin-bottom: 20px; /* Adaugă spațiu între logo și text */
+  }
+
+  .logo-image {
+    width: 250px; /* Dimensiune redusă pentru logo */
+  }
+
+  #company-text {
+    max-width: 100%; /* Text pe lățimea completă */
+  }
+
+  #company-text h1 {
+    font-size: 2.5rem; /* Titlu ajustat pentru tablete */
+  }
+
+  #company-text p {
+    font-size: 1.1rem; /* Text ușor mai mic pe tablete */
+  }
 }
 
-/* Responsivität für kleinere Bildschirme */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column; /* Elemente untereinander auf kleineren Bildschirmen */
-        padding: 20px;
-        text-align: center;
-    }
+  header {
+    padding: 15px;
+  }
 
-    #logo-container {
-        margin-bottom: 20px;
-    }
+  .logo-image {
+    width: 200px; /* Dimensiune mai mică pentru telefoane */
+  }
 
-    .logo-image {
-        width: 250px; /* Größere Logo-Größe auf mobilen Geräten */
-    }
+  #company-text h1 {
+    font-size: 2rem; /* Titlu mai mic pe telefoane */
+  }
 
-    #company-text {
-        text-align: center;
-    }
-
-    #company-text h1 {
-        font-size: 2.5rem; /* Kleinere Schriftgröße für den Titel */
-    }
-
-    #company-text p {
-        font-size: 1rem; /* Kleinere Schriftgröße für den Text */
-    }
+  #company-text p {
+    font-size: 0.9rem; /* Text mai mic pentru telefoane */
+  }
 }

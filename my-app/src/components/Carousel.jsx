@@ -1,15 +1,14 @@
- // Import corect
-import './styles/Carousel.css'; // Importă fișierul CSS
-
-// Importă fișierele de imagini
-import img1 from './images/Trockenbau .jpg';
-import img2 from './images/trockenbau 2.png';
-import img3 from './images/trockenbau 3.png';
-import img4 from './images/trockenbau 4.png';
+// Importă fișierul CSS pentru Carousel
+import './styles/Carousel.css'; 
 
 const Carousel = () => {
-  // Folosim importurile pentru a crea lista de imagini
-  const images = [img1, img2, img3, img4]; // Folosește importurile aici
+  // Drumuri absolute către imaginile din directorul public
+  const images = [
+    '/images/Trockenbau .jpg',       // Fără spații în numele fișierelor
+    '/images/trockenbau 2.png',
+    '/images/trockenbau 3.png',
+    '/images/trockenbau 4.png',
+  ];
 
   return (
     <section className="carousel-section">

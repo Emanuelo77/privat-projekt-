@@ -4,39 +4,78 @@
     margin: 40px auto;
     padding: 40px 0;
     background: #f9f9f9;
-}
-
-.carousel-section h2 {
-    font-size: 1.8em;
+  }
+  
+  .carousel-section h2 {
+    font-size: 2rem;
     margin-bottom: 20px;
     font-weight: bold;
-}
-
-.carousel-container {
+    color: #003366; /* Culoare elegantă pentru titlu */
+  }
+  
+  /* Container pentru Carousel */
+  .carousel-container {
     position: relative;
-    width: 90%; /* Lățimea containerului mai largă pentru a adăuga mai mult spațiu */
+    width: 90%; /* Ocupă 90% din lățimea paginii */
     margin: 0 auto;
-    overflow: hidden; /* Ascunde orice conținut care depășește containerul */
-    border-radius: 8px;
-}
-
-.carousel {
-    display: flex; /* Folosim flexbox pentru a aranja imaginile pe orizontală */
-    justify-content: space-between; /* Adăugăm spațiu între imagini */
-}
-
-.carousel-item {
-    flex: 0 0 auto; /* Imaginile își păstrează dimensiunea naturală */
-    margin-right: 15px; /* Spațiu între imagini */
-}
-
-.carousel-item:last-child {
-    margin-right: 0; /* Eliminăm marginile suplimentare pentru ultima imagine */
-}
-
-.carousel-item img {
-    width: 400px; /* Lățimea imaginilor și mai mari */
-    height: 300px; /* Înălțimea imaginilor și mai mari */
-    object-fit: cover; /* Imaginile vor fi decupate pentru a se potrivi proporțional */
-    border-radius: 8px; /* Colțuri rotunjite pentru un aspect mai estetic */
-}
+    overflow: hidden; /* Ascunde conținutul care depășește containerul */
+    border-radius: 10px; /* Colțuri rotunjite pentru un aspect estetic */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adaugă o umbră subtilă */
+  }
+  
+  /* Carousel-ul propriu-zis */
+  .carousel {
+    display: flex;
+    gap: 20px; /* Spațiu între imaginile din carusel */
+    justify-content: center; /* Centrează imaginile în container */
+    align-items: center;
+    flex-wrap: wrap; /* Permite imaginilor să se împartă pe mai multe rânduri */
+  }
+  
+  /* Fiecare element din Carousel */
+  .carousel-item {
+    flex: 0 1 calc(25% - 20px); /* Imaginile ocupă 25% din container minus spațiu */
+    max-width: calc(25% - 20px); /* Asigură o lățime maximă consistentă */
+  }
+  
+  .carousel-item img {
+    width: 100%; /* Imaginile ocupă întreaga lățime a containerului lor */
+    height: 200px; /* Setăm o înălțime fixă pentru consistență */
+    object-fit: cover; /* Decupare proporțională a imaginilor */
+    border-radius: 10px; /* Colțuri rotunjite */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Umbra pentru imagini */
+    transition: transform 0.3s ease; /* Efect la hover */
+  }
+  
+  .carousel-item img:hover {
+    transform: scale(1.05); /* Mărește imaginea ușor la hover */
+  }
+  
+  /* Responsivitate pentru tablete */
+  @media (max-width: 1024px) {
+    .carousel-item {
+      flex: 0 1 calc(33.33% - 20px); /* Imaginile ocupă 33.33% din container */
+      max-width: calc(33.33% - 20px); /* Ajustare lățime pentru tablete */
+    }
+  
+    .carousel-section h2 {
+      font-size: 1.8rem; /* Titlu mai mic pe tablete */
+    }
+  }
+  
+  /* Responsivitate pentru telefoane */
+  @media (max-width: 768px) {
+    .carousel-item {
+      flex: 0 1 calc(50% - 20px); /* Imaginile ocupă 50% din container */
+      max-width: calc(50% - 20px); /* Ajustare lățime pentru telefoane */
+    }
+  
+    .carousel-section h2 {
+      font-size: 1.6rem; /* Titlu mai mic pe telefoane */
+    }
+  
+    .carousel-container {
+      width: 95%; /* Extinde containerul la aproape întreaga lățime */
+    }
+  }
+  
