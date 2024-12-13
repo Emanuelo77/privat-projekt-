@@ -26,9 +26,24 @@ jobs:
     - name: Deploy to Firebase
       uses: wzieba/Firebase-Deploy-Github-Action@v0.3.1
       with:
-        firebase_token: ${{ secrets.FIREBASE_TOKEN }}  # Folosește secretul FIREBASE_TOKEN
-        project_id: "project-5719524038184872764"  # ID-ul proiectului tău
+        firebase_token: name: Firebase Deploy
 
+on:
+  push:
+    branches:
+      - main  # Workflow-ul va rula atunci când faci un push pe ramura principală
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
         node-version: '16'  # Asigură-te că ai Node.js 16 sau o versiune mai recentă
 
     - name: Install dependencies
@@ -39,5 +54,7 @@ jobs:
     - name: Deploy to Firebase
       uses: wzieba/Firebase-Deploy-Github-Action@v0.3.1
       with:
-        firebase_token:  1//033aSCzkAjV6ICgYIARAAGAMSNwF-L9IrgOvKfyducbkN0nvDcV0JbyQ9VfNqLyRSt2ed_tg8qsSO3m9jggqrulzJS3R_Eiw1Vck # Acesta este tokenul pe care l-ai obținut
+        firebase_token: 1//033aSCzkAjV6ICgYIARAAGAMSNwF-L9IrgOvKfyducbkN0nvDcV0JbyQ9VfNqLyRSt2ed_tg8qsSO3m9jggqrulzJS3R_Eiw1Vck 
+      
+ # Folosește secretul FIREBASE_TOKEN
         project_id: "project-5719524038184872764"  # ID-ul proiectului tău
