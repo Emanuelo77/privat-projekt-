@@ -3,7 +3,7 @@ name: Firebase Deploy
 on:
   push:
     branches:
-      - main  # Acesta va rula workflow-ul atunci când faci un push pe ramura principală (main)
+      - main  # Workflow-ul va rula atunci când faci un push pe ramura principală
 
 jobs:
   deploy:
@@ -24,7 +24,7 @@ jobs:
         npm run build  # Dacă folosești React sau alt framework JS pentru a construi aplicația
 
     - name: Deploy to Firebase
-      uses: firebase-actions/firebase-hosting-deploy@v0.2.0
+      uses: wzieba/Firebase-Deploy-Github-Action@v0.3.1
       with:
-        firebase_token: ${{ secrets.FIREBASE_TOKEN }}  # Acesta este tokenul pe care l-ai salvat în secret
+        firebase_token: ${{ secrets.FIREBASE_TOKEN }}  # Folosește secretul FIREBASE_TOKEN
         project_id: "project-5719524038184872764"  # ID-ul proiectului tău
