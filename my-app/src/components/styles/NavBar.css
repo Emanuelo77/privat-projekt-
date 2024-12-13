@@ -1,19 +1,19 @@
 /* Stiluri pentru navbar */
 nav {
   display: flex;
-  justify-content: center; /* Centerază navbar-ul pe orizontală */
-  align-items: center; /* Centerază navbar-ul pe verticală */
+  justify-content: flex-end; /* Schiebt alle Buttons nach rechts */
+  align-items: center;
   position: relative;
-  margin-top: 20px; /* Adaugă un spațiu între navbar și partea de sus a paginii */
+  margin-top: 20px;
 }
 
 /* Lista de navigare */
 nav ul {
   list-style: none;
-  display: flex;  /* Elementele vor fi plasate pe orizontală */
-  gap: 20px;  /* Spațiu între fiecare item din navbar */
-  margin: 0;  /* Elimină marginile implicite */
-  padding: 0;  /* Elimină padding-ul implicit */
+  display: flex;
+  gap: 20px; /* Abstand zwischen den Buttons */
+  margin: 0;
+  padding: 0;
 }
 
 /* Stiluri pentru linkurile din navbar */
@@ -32,18 +32,18 @@ nav ul li a {
 /* Stiluri pentru hover pe linkuri */
 nav ul li a:hover {
   background-color: #333;
-  transform: scale(1.1);  /* Efect de mărire ușoară la hover */
+  transform: scale(1.1); /* Leichter Zoom bei Hover */
 }
 
 /* Responsivitate pentru mobile */
 @media (max-width: 768px) {
   nav ul {
-    flex-direction: column;  /* Stivuiește elementele pe verticală la ecrane mici */
-    align-items: center;  /* Centerază item-urile pe axa orizontală */
+    flex-direction: column; /* Buttons auf mobilen Geräten untereinander */
+    align-items: flex-end; /* Ausrichtung der Buttons rechts */
   }
 
   nav ul li a {
-    font-size: 1rem;  /* Mărimea fontului devine mai mică pe mobil */
-    padding: 12px 24px; /* Mărire mică a padding-ului */
+    font-size: 1rem;
+    padding: 12px 24px;
   }
 }

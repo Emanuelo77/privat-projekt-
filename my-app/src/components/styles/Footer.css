@@ -1,45 +1,50 @@
 /* Footer Styling */
 footer {
-    background: linear-gradient(to bottom, #202020, #464645);
-    color: white;
-    padding: 20px 30px; /* Crește padding-ul pentru a adăuga mai mult spațiu */
-    min-height: 200px; /* Asigură-te că footer-ul are o înălțime minimă */
+    background: linear-gradient(to bottom, #ece8e8, #e5e5e3);
+    color: rgb(35, 33, 33);
+    padding: 20px 30px; /* Mehr Padding für mehr Raum */
+    min-height: 200px; /* Stellt sicher, dass der Footer eine Mindesthöhe hat */
 }
 
-/* Flexbox pentru a alinia secțiunile pe orizontală */
+/* Flexbox für die horizontale Ausrichtung der Abschnitte */
 .footer-content {
     display: flex;
-    justify-content: space-between; /* Aliniem secțiunile pe orizontală cu spațiu între ele */
-    gap: 20px; /* Crește spațiul între secțiuni */
+    justify-content: space-between; /* Verteilt den Raum zwischen den Sektionen */
+    gap: 30px; /* Größerer Abstand zwischen den Sektionen */
     align-items: flex-start;
-    margin-bottom: 20px; /* Adaugă spațiu între conținutul footer-ului și copyright */
+    margin-bottom: 20px; /* Abstand zum Copyright */
 }
 
-/* Reducem dimensiunea secțiunilor și le apropiem mai mult */
+/* Die einzelnen Sektionen im Footer */
 .contact-info, .working-hours {
-    margin-right: 0px; /* Eliminăm orice margine suplimentară */
-    flex: 1; /* Permitem secțiunilor să ocupe fiecare cât mai mult spațiu posibil */
+    flex: 1; /* Sorgt dafür, dass jede Sektion denselben Platz bekommt */
 }
 
-/* Reducem dimensiunea titlurilor */
+/* Titel im Footer */
 footer h3 {
-    font-size: 1.4rem; /* Dimensiune mai mare pentru titluri pentru un aspect mai vizibil */
+    font-size: 1.4rem; /* Größere Schrift für Titel */
     margin-bottom: 5px;
 }
 
-/* Paragrafele din footer */
+/* Anpassung der Arbeitszeiten: Noch mehr nach links verschieben */
+.working-hours {
+    padding-left: 200px; /* Sehr viel mehr Padding nach links */
+    margin-left: -800px; /* Negative Margin verschiebt den Text weiter nach links */
+}
+
+/* Absätze im Footer */
 footer p {
     margin: 5px 0;
 }
 
-/* Pentru orele de lucru din footer */
+/* Spezielle Styling für die Arbeitszeiten */
 .working-hours p {
     margin: 3px 0;
 }
 
-/* Linkurile din footer */
+/* Links im Footer */
 footer a {
-    color: white;
+    color: rgb(38, 36, 36);
     text-decoration: none;
 }
 
@@ -47,9 +52,46 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Copyright în footer */
+/* Copyright Styling */
 .footer-copyright {
+    color: white; /* Setează culoarea textului pe alb */
     text-align: center;
-    font-size: 1rem; /* Mărim puțin textul copyright-ului pentru un aspect mai vizibil */
+    font-size: 1rem;
     margin-top: 20px;
+}
+
+/* Responsives Design für kleinere Bildschirme */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stellt die Sektionen untereinander auf kleinen Bildschirmen */
+        gap: 20px; /* Kleinerer Abstand zwischen den Sektionen */
+    }
+
+    .contact-info, .working-hours {
+        flex: none; /* Die Sektionen sollten ihre ursprüngliche Größe behalten */
+    }
+
+    footer h3 {
+        font-size: 1.2rem; /* Kleinere Titel auf mobilen Geräten */
+    }
+
+    footer p {
+        font-size: 1rem; /* Kleinere Schriftgröße für Absätze */
+    }
+}
+/* Zusätzliche Informationen im Footer */
+.additional-info {
+    flex: 1; /* Asigură-te că textul ocupă tot spațiul disponibil */
+    margin-left: -550px; /* Muta secțiunea mai mult spre stânga */
+}
+
+/* Stilizare pentru titlu */
+.additional-info h3 {
+    font-size: 1.4rem; /* Mărimea fontului pentru titluri */
+    margin-bottom: 5px;
+}
+
+/* Stilizare pentru paragrafe */
+.additional-info p {
+    margin: 5px 0;
 }
