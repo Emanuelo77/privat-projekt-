@@ -1,35 +1,50 @@
+/* Hauptcontainer für die Galerie */
 .galerie-container {
   text-align: center;
   margin: 20px;
 }
 
+/* Container für die Bilder in der Galerie */
 .galerie-images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 15px; /* Abstand zwischen den Bildern */
 }
 
+/* Container für jedes Bild */
 .image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 15px;
   cursor: pointer;
+  transition: transform 0.3s ease; /* Sanfter Übergang für den Hover-Effekt */
 }
 
+/* Stil für das Bild */
 .image-container img {
-  width: 200px; /* Lățimea imaginii */
-  height: 200px; /* Înălțimea imaginii */
-  object-fit: cover; /* Asigură că imaginea va umple cadrul fără a o deforma */
+  width: 200px; /* Breite des Bildes */
+  height: 200px; /* Höhe des Bildes */
+  object-fit: cover; /* Das Bild wird den Container ausfüllen, ohne verzerrt zu werden */
   margin-bottom: 10px;
+  border-radius: 10px; /* Abgerundete Ecken für das Bild */
+  transition: transform 0.3s ease; /* Sanfter Übergang beim Hover */
 }
 
+/* Hover-Effekt für das Bild */
+.image-container:hover img {
+  transform: scale(1.1); /* Das Bild wird beim Hover leicht vergrößert */
+}
+
+/* Text unter dem Bild */
 .image-container p {
   font-size: 16px;
   color: #333;
-  margin: 5px 0; /* Adaugă puțin spațiu între text */
+  margin: 5px 0; /* Abstand zwischen Text und Bild */
 }
 
+/* Lightbox-Stil */
 .lightbox {
   position: fixed;
   top: 0;
@@ -43,7 +58,16 @@
   z-index: 1000;
 }
 
+/* Stil für das Bild in der Lightbox */
 .lightbox img {
   max-width: 90%;
   max-height: 90%;
+}
+
+/* Responsives Design für kleine Bildschirme */
+@media (max-width: 768px) {
+  .image-container img {
+    width: 150px; /* Kleinere Bilder auf mobilen Geräten */
+    height: 150px;
+  }
 }

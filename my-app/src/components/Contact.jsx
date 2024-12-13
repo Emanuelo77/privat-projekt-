@@ -34,6 +34,20 @@ function Contact() {
   return (
     <div className="contact">
       <h1>Kontakt</h1>
+      
+      {/* Firmendaten */}
+      <div className="company-info">
+        <h2>P&M Baumeister GmbH</h2>
+        <h3>Unser Ansprechpartner</h3>
+        <p><strong>Name:</strong> Uhrec Paul Traian</p>
+        <p><strong>Adresse:</strong> Am Klingern 17, 63075 Offenbach Am Main</p>
+        <p><strong>Telefon:</strong> +491630418449</p>
+        <p><strong>Email:</strong> Trockenbau.offenbach@yahoo.de</p>
+      </div>
+
+      {/* Ansprechpartner */}
+     
+      {/* Formular */}
       <form className="contact-form" onSubmit={handleSubmit}>
         <h2>Schreiben Sie uns eine Nachricht</h2>
         <label>

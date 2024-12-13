@@ -1,100 +1,169 @@
+/* Hauptcontainer für das Kontaktformular */
 .contact {
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
+  padding: 40px; /* Abstand rund um das Formular */
+  font-family: 'Poppins', sans-serif; /* Schöne, moderne Schriftart */
 }
 
-.contact h1 {
-  font-size: 2.5rem;
-  color: #000; /* Aceeași culoare ca textul din meniu */
-  text-align: center;
-  margin-bottom: 30px;
+/* Überschrift für den Abschnitt Kontakt */
+h1 {
+  text-align: center; /* Zentriert die Hauptüberschrift */
+  color: #000; /* Schwarze Farbe für den Text */
 }
 
-.contact-details {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 40px;
+/* Abschnitt mit den Firmendaten */
+.company-info {
+  background-color: #f8f9fa; /* Heller Hintergrund für den Firmendatenbereich */
+  padding: 20px; /* Abstand im Inneren */
+  border-radius: 10px; /* Abgerundete Ecken */
+  margin-bottom: 30px; /* Abstand nach unten */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sanfter Schatten um den Abschnitt */
 }
 
-.contact-details div {
-  flex: 1;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Überschriften innerhalb der Firmeninfo und Kontaktbereich */
+h2, h3 {
+  font-size: 1.8rem; /* Größere Schriftgröße für Überschriften */
+  color: #000; /* Schwarze Farbe für Überschriften */
 }
 
-.contact-details h2 {
-  font-size: 1.5rem;
-  color: #000; /* Culoarea textului din meniu */
-  margin-bottom: 15px;
+/* Allgemeiner Text */
+p {
+  font-size: 1.1rem; /* Normale Schriftgröße */
+  line-height: 1.6; /* Mehr Zeilenabstand für bessere Lesbarkeit */
 }
 
-.contact-details p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.contact-details p strong {
-  color: #000; /* Culoarea din meniu */
-}
-
+/* Formularbereich */
 .contact-form {
-  margin-top: 40px;
+  background-color: #f8f9fa; /* Gleicher Hintergrund wie die Firmeninfo */
+  padding: 30px; /* Abstand rund um das Formular */
+  border-radius: 10px; /* Abgerundete Ecken für das Formular */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sanfter Schatten um das Formular */
 }
 
+/* Überschrift im Formularbereich */
 .contact-form h2 {
-  font-size: 1.8rem;
-  color: #000; /* Culoarea textului din meniu */
-  margin-bottom: 20px;
-  text-align: center;
+  font-size: 2rem; /* Etwas größere Schriftgröße für den Titel im Formular */
+  color: #000; /* Schwarze Farbe für den Titel */
+  margin-bottom: 20px; /* Abstand nach unten */
 }
 
+/* Etiketten im Formular */
 .contact-form label {
-  display: block;
-  margin-bottom: 15px;
+  display: block; /* Stellt sicher, dass das Label auf einer eigenen Linie erscheint */
+  margin-bottom: 10px; /* Abstand nach unten */
+  font-size: 1.1rem; /* Schriftgröße für die Etiketten */
 }
 
-.contact-form span {
-  display: block;
-  font-size: 1rem;
-  color: #333;
-  margin-bottom: 5px;
+/* Eingabefelder im Formular */
+.contact-form input, .contact-form textarea {
+  width: 100%; /* Stellt sicher, dass die Felder die ganze Breite einnehmen */
+  padding: 10px; /* Polsterung innerhalb der Felder */
+  border: 1px solid #ddd; /* Helle Rahmenfarbe */
+  border-radius: 5px; /* Abgerundete Ecken für die Felder */
+  margin-bottom: 20px; /* Abstand nach unten zwischen den Feldern */
+  font-size: 1rem; /* Normale Schriftgröße */
+  transition: border 0.3s; /* Übergangseffekt beim Fokussieren der Felder */
 }
 
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+/* Eingabefelder im Fokus */
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: #000; /* Schwarze Rahmenfarbe beim Fokussieren */
 }
 
+/* Der Button zum Absenden des Formulars */
 .contact-form button {
-  margin-top: 20px;
-  width: 100%;
-  padding: 12px;
-  background-color: #000; /* Fundalul din meniu */
-  color: white; /* Text alb pentru contrast */
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  cursor: pointer;
+  padding: 10px 20px; /* Polsterung des Buttons */
+  background-color: #000; /* Schwarzer Hintergrund für den Button */
+  color: white; /* Weiße Schriftfarbe */
+  border: none; /* Kein Rahmen */
+  border-radius: 5px; /* Abgerundete Ecken */
+  font-size: 1.1rem; /* Schriftgröße für den Button */
+  cursor: pointer; /* Zeigt den Mauszeiger als Hand an */
+  transition: background-color 0.3s; /* Übergangseffekt beim Hover */
 }
 
+/* Hover-Effekt für den Button */
 .contact-form button:hover {
-  background-color: #333; /* O nuanță mai închisă pentru hover */
+  background-color: #333; /* Dunklerer Hintergrund beim Überfahren mit der Maus */
 }
 
-/* Responsivitate */
-@media (max-width: 768px) {
-  .contact-details {
-    flex-direction: column;
+/* Statusnachricht nach dem Absenden */
+.contact-form p {
+  color: green; /* Grüne Farbe für Erfolgsnachricht */
+  font-size: 1.1rem; /* Schriftgröße */
+  text-align: center; /* Zentriert den Text */
+  margin-top: 20px; /* Abstand nach oben */
+}
+
+/* Medienabfragen für responsives Design */
+
+/* Kleine Bildschirme (maximale Breite 600px) */
+@media (max-width: 600px) {
+  .contact {
+    padding: 20px; /* Weniger Abstand für kleinere Bildschirme */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Kleinere Schriftgröße für kleinere Bildschirme */
+  }
+
+  h2, h3 {
+    font-size: 1.5rem; /* Kleinere Schriftgröße für Überschriften */
+  }
+
+  p {
+    font-size: 1rem; /* Kleinere Schriftgröße für allgemeinen Text */
+  }
+
+  .contact-form {
+    padding: 20px; /* Weniger Abstand für kleinere Bildschirme */
+  }
+
+  .contact-form h2 {
+    font-size: 1.8rem; /* Kleinere Schriftgröße für den Titel im Formular */
+  }
+
+  .contact-form input, .contact-form textarea {
+    font-size: 0.9rem; /* Kleinere Schriftgröße für Eingabefelder */
+  }
+
+  .contact-form button {
+    font-size: 1rem; /* Kleinere Schriftgröße für den Button */
+    padding: 8px 16px; /* Kleinere Polsterung */
+  }
+}
+
+/* Mittlere Bildschirme (600px - 1024px) */
+@media (max-width: 1024px) and (min-width: 601px) {
+  .contact {
+    padding: 30px; /* Etwas weniger Abstand als auf großen Bildschirmen */
+  }
+
+  h1 {
+    font-size: 2rem; /* Etwas kleinere Schriftgröße für mittlere Bildschirme */
+  }
+
+  h2, h3 {
+    font-size: 1.7rem; /* Etwas kleinere Schriftgröße für Überschriften */
+  }
+
+  p {
+    font-size: 1.1rem; /* Normale Schriftgröße für mittlere Bildschirme */
+  }
+
+  .contact-form {
+    padding: 25px; /* Etwas weniger Abstand für mittlere Bildschirme */
+  }
+
+  .contact-form h2 {
+    font-size: 1.9rem; /* Etwas kleinere Schriftgröße für den Titel im Formular */
+  }
+
+  .contact-form input, .contact-form textarea {
+    font-size: 1rem; /* Normale Schriftgröße für Eingabefelder */
+  }
+
+  .contact-form button {
+    font-size: 1.1rem; /* Normale Schriftgröße für den Button */
+    padding: 10px 18px; /* Normale Polsterung für den Button */
   }
 }

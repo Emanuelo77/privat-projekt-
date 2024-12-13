@@ -7,7 +7,7 @@ header {
     background-size: 300% 300%;
     color: rgb(240, 238, 238);
     display: flex;
-    justify-content: space-between; /* Spațiu între logo și text */
+    justify-content: space-between; /* Abstand zwischen Logo und Text */
     align-items: center;
     padding: 30px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
@@ -22,56 +22,56 @@ header {
     100% { background-position: 0% 50%; }
 }
 
-/* Container pentru logo */
+/* Container für Logo */
 #logo-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: 40px; /* Spațiu între logo și text */
+    margin-right: 40px; /* Abstand zwischen Logo und Text */
 }
 
-/* Stil pentru logo */
+/* Stil für Logo */
 .logo-image {
-    width: 300px; /* Dimensiune mai mare pentru vizibilitate maximă */
-    height: auto; /* Păstrează proporțiile */
-    border-radius: 20px; /* Colțuri rotunjite pentru un aspect modern */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Umbră subtilă pentru contrast */
+    width: 300px; /* Größere Dimension für maximale Sichtbarkeit */
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
+    border-radius: 20px; /* Abgerundete Ecken für einen modernen Look */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sanfter Schatten für besseren Kontrast */
 }
 
-/* Stil pentru text */
+/* Stil für Text */
 #company-text {
-    color: #003366; /* Albastru elegant pentru text */
+    color: #003366; /* Elegantes Blau für den Text */
     text-align: left;
-    max-width: 600px; /* Lățime maximă pentru text */
-    margin: 0 auto; /* Centrează textul */
+    max-width: 600px; /* Maximale Breite für den Text */
+    margin: 0 auto; /* Zentriert den Text */
     font-size: 1.5rem;
-    line-height: 2; /* Spacing între linii pentru lizibilitate */
+    line-height: 2; /* Erhöhter Zeilenabstand für bessere Lesbarkeit */
 }
 
 #company-text h1 {
-    font-size: 3rem; /* Dimensiune mare pentru titlu */
-    color: #002d62; /* Albastru închis pentru impact */
-    margin-bottom: 15px; /* Spațiu sub titlu */
+    font-size: 3rem; /* Große Schriftgröße für den Titel */
+    color: #002d62; /* Dunkelblau für den Titel */
+    margin-bottom: 15px; /* Abstand unter dem Titel */
 }
 
 #company-text p {
-    margin: 10px 0; /* Spațiu între paragrafe */
-    font-size: 1.2rem; /* Dimensiune text */
-    color: #003366; /* Culoare consistentă cu designul */
+    margin: 10px 0; /* Abstand zwischen den Absätzen */
+    font-size: 1.2rem; /* Textgröße für den normalen Text */
+    color: #003366; /* Konsistente Textfarbe */
 }
 
-/* Flexbox pentru header content */
+/* Flexbox für den Header-Inhalt */
 .header-content {
     display: flex;
-    justify-content: space-between; /* Spațiu între logo și text */
+    justify-content: space-between; /* Abstand zwischen Logo und Text */
     align-items: center;
     width: 100%;
 }
 
-/* Responsivitate pentru dispozitive mici */
+/* Responsivität für kleinere Bildschirme */
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Elemente sub formă de coloană */
+        flex-direction: column; /* Elemente untereinander auf kleineren Bildschirmen */
         padding: 20px;
         text-align: center;
     }
@@ -81,7 +81,7 @@ header {
     }
 
     .logo-image {
-        width: 250px; /* Dimensiune mai mare și pentru dispozitive mici */
+        width: 250px; /* Größere Logo-Größe auf mobilen Geräten */
     }
 
     #company-text {
@@ -89,10 +89,10 @@ header {
     }
 
     #company-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Kleinere Schriftgröße für den Titel */
     }
 
     #company-text p {
-        font-size: 1rem;
+        font-size: 1rem; /* Kleinere Schriftgröße für den Text */
     }
 }
