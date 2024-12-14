@@ -1,73 +1,75 @@
-/* Hauptcontainer für die Galerie */
+/* Container general pentru galerie */
 .galerie-container {
-  text-align: center;
-  margin: 20px;
-}
-
-/* Container für die Bilder in der Galerie */
-.galerie-images {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px; /* Abstand zwischen den Bildern */
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-/* Container für jedes Bild */
+.galerie-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+/* Stil pentru fiecare imagine și text */
 .image-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px;
-  cursor: pointer;
-  transition: transform 0.3s ease; /* Sanfter Übergang für den Hover-Effekt */
+  text-align: center;
 }
 
-/* Stil für das Bild */
 .image-container img {
-  width: 200px; /* Breite des Bildes */
-  height: 200px; /* Höhe des Bildes */
-  object-fit: cover; /* Das Bild wird den Container ausfüllen, ohne verzerrt zu werden */
-  margin-bottom: 10px;
-  border-radius: 10px; /* Abgerundete Ecken für das Bild */
-  transition: transform 0.3s ease; /* Sanfter Übergang beim Hover */
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
-/* Hover-Effekt für das Bild */
-.image-container:hover img {
-  transform: scale(1.1); /* Das Bild wird beim Hover leicht vergrößert */
+.image-container img:hover {
+  transform: scale(1.05);
 }
 
-/* Text unter dem Bild */
 .image-container p {
-  font-size: 16px;
+  margin-top: 10px;
+  font-size: 14px;
   color: #333;
-  margin: 5px 0; /* Abstand zwischen Text und Bild */
 }
 
-/* Lightbox-Stil */
+/* Stil pentru lightbox */
 .lightbox {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundal semi-transparent */
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
 }
 
-/* Stil für das Bild in der Lightbox */
 .lightbox img {
   max-width: 90%;
   max-height: 90%;
+  border: 5px solid white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  animation: fadeIn 0.3s ease-in-out; /* Efect de intrare */
 }
 
-/* Responsives Design für kleine Bildschirme */
-@media (max-width: 768px) {
-  .image-container img {
-    width: 150px; /* Kleinere Bilder auf mobilen Geräten */
-    height: 150px;
+/* Animație pentru lightbox */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

@@ -1,5 +1,5 @@
 
-import './styles/welcomeSection.css'; // CSS-Datei importieren
+import './styles/WelcomeSection.css'; // CSS-Datei importieren
 
 function WelcomeSection() {
   return (

@@ -15,153 +15,53 @@ function Galerie() {
     setCurrentImage('');
   };
 
+  const images = [
+    { src: '/Galerie/Mauer.jpg', alt: 'Bild 1', text: 'Mauer Wand - Mauerwerk von Anfang bis Ende, einschließlich orangefarbener Fugendichtungen.' },
+    { src: '/Galerie/Trockenbau wande .jpg', alt: 'Bild 2', text: 'Trockenbauwand-Struktur für F90-Wände, die eine Feuerbeständigkeit von bis zu 90 Minuten bieten.' },
+    { src: '/Galerie/Decke.jpg', alt: 'Bild 3', text: 'Bandrasterdecke mit Warm- und Kaltwasserheizung.' },
+    { src: '/Galerie/Fenster.jpg', alt: 'Bild 4', text: 'F-90 Fenster für Wände montiert und F-90 Wände mit Diamantplatten montiert.' },
+    { src: '/Galerie/Fassade.jpg', alt: 'Bild 5', text: 'Fassade komplett erstellt, inkl. Polystyrolverklebung, Dekoration und Fensterwinkelmontage.' },
+    { src: '/Galerie/Laminat.jpg', alt: 'Bild 6', text: 'Parkettmontage und Linoleumverlegung sowie Sanierung an anderen Wänden.' },
+    { src: '/Galerie/Treppen.jpg', alt: 'Bild 7', text: 'Geschliffene und lackierte Treppen zusammen mit qualitativem Wandstein-Montage.' },
+    { src: '/Galerie/wohnung.jpg', alt: 'Bild 8', text: 'Komplett renovierte Wohnung: Fenstermontage, Türen, Zargen, Parkett und weitere Arbeiten.' },
+    { src: '/Galerie/lll.jpg', alt: 'Bild 9', text: 'Verschiedene Renovierungsarbeiten, einschließlich Fensterinstallation, Türmontage und Malerarbeiten.' },
+    { src: '/Galerie/kuche.jpg', alt: 'Bild 10', text: 'Vollständige Küchenmontage nach der Renovierung der Wohnung, einschließlich Geräten wie Ofen und Herd.' },
+    { src: '/Galerie/owa.jpg', alt: 'Bild 11', text: 'Owa-Deckenmontage mit Owa-Struktur sowie Spachtelung und Anstrich der Nebenwände.' },
+    { src: '/Galerie/dach.jpg', alt: 'Bild 12', text: 'Innenausbau des Dachs mit Dämmfolie, hochwertiger Abdichtung, Velux-Fenstern und Rigipsdecke.' },
+    { src: '/Galerie/dach 2.jpg', alt: 'Bild 13', text: 'GKB-Decke mit Dämmung, Spachtelung sowie doppelte Trockenbauunterkonstruktion.' },
+    { src: '/Galerie/f90.jpg', alt: 'Bild 14', text: 'F90-Brandschutzkästen für Lüftungskanäle und Rohrleitungen mit Feuerwiderstandsdauer von bis zu 90 Minuten.' },
+    { src: '/Galerie/grosse decke.jpg', alt: 'Bild 15', text: 'Löchdecke mit doppelter UK-Konstruktion, gespachtelten Fugen und runder Lampenverstärkung.' },
+    { src: '/Galerie/123.jpg', alt: 'Bild 16', text: 'GKB-Decke mit einlagiger Beplankung, doppelter UK-Konstruktion, Lampen- und Revisionsausschnitten.' },
+    { src: '/Galerie/haus.jpg', alt: 'Bild 17', text: 'Rigips-Deckenschrägen und seitliche Stützen mit Winkelmontage, gespachtelt und gestrichen.' },
+    { src: '/Galerie/luxus.jpg', alt: 'Bild 18', text: 'Elegante Lochdecke mit seitlichen Gipsstützen und Fugenspachtelung, präzise integrierte Lampenausschnitte.' },
+    { src: '/Galerie/skafen .jpg', alt: 'Bild 19', text: 'Lochdecke in der Mitte, seitlich Gipsplatten mit originalen Kanten und Platz für Lampen integriert.' },
+    { src: '/Galerie/skafen 5.jpg', alt: 'Bild 20', text: 'Rigipswand mit Nischen in Schafform, sauber verarbeitet und ideal für dekorative oder praktische Nutzung.' },
+    { src: '/Galerie/skafen 2.jpg', alt: 'Bild 21', text: 'Kreisförmige Rigipsdecke mit mehreren Ebenen, präzisen Kanten und integrierten Lampenausschnitten.' },
+    { src: '/Galerie/fassaden.jpg', alt: 'Bild 22', text: 'Fassade mit Wärmedämmung, inklusive Fensterwinkeln, Sockelbereich und dekorativem Putz.' },
+    { src: '/Galerie/laminut.jpg', alt: 'Bild 23', text: 'Vinyl-Laminat sauber verlegt, ergänzt durch moderne Tapete für ein elegantes Design.' },
+   
+  ];
+
   return (
     <div className="galerie-container">
       <h2>Unsere Galerie</h2>
       <h2>Hier können Sie Bilder unserer fertiggestellten Projekte sehen</h2>
       <div className="galerie-images">
-        {/* Imagini cu text */}
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/Mauer.jpg')}>
-          <img src="public/Galerie/Mauer.jpg" alt="Bild 1" />
-          <p>Mauer Wand - Mauerwerk von Anfang bis Ende,</p>
-            <p>einschließlich orangefarbener Fugendichtungen.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/Trockenbau wande .jpg')}>
-          <img src="public/Galerie/Trockenbau wande .jpg" alt="Bild 2" />
-          <p>Trockenbauwand-Struktur für F90-Wände,</p>
-          <p> die eine Feuerbeständigkeit von bis</p>
-            <p>zum 90 Minuten bieten.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/Decke.jpg')}>
-          <img src="public/Galerie/Decke.jpg" alt="Bild 3" />
-          <p>Bandrasterdecke mit </p>
-          <p>Warm- und Kaltwasserheizung</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/Fenster.jpg')}>
-          <img src="public/Galerie/Fenster.jpg" alt="Bild 4" />
-          <p>F-90 Fenster für Wände montiert</p>
-          <p>und F-90 Wände mit Diamantplatten montiert.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/Fassade.jpg')}>
-          <img src="public/Galerie/Fassade.jpg" alt="Bild 5" />
-          <p>Fassade komplett erstellt,</p>
-          <p>inkl. Polystyrolverklebung,</p> 
-          <p>Dekoration und Fensterwinkelmontage.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/Laminat.jpg')}>
-          <img src="public/Galerie/Laminat.jpg" alt="Bild 6" />
-          <p>Parkettmontage und Linoleumverlegung </p>
-          <p>sowie Sanierung an anderen Wänden.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/Treppen.jpg')}>
-          <img src="public/Galerie/Treppen.jpg" alt="Bild 7" />
-          <p>Geschliffene und lackierte </p>
-          <p>Treppen zusammen mit </p>
-          <p>qualitativem Wandstein-Montage.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/wohnung.jpg')}>
-          <img src="public/Galerie/wohnung.jpg" alt="Bild 8" />
-         <p>Komplett renovierte Wohnung.</p>
-         <p>sowie  Fenstern Montage, Türen,.</p> 
-         <p>Zargen, Parkett, Anstrich und weiteren Arbeiten.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/lll.jpg')}>
-          <img src="public/Galerie/lll.jpg" alt="Bild 9" />
-          <p>Verschiedene Renovierungsarbeiten, </p>
-          <p> einschließlich Fensterinstallation,</p>
-          <p> Türmontage, Malerarbeiten und Bodenverlegung.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/kuche.jpg')}>
-          <img src="public/Galerie/kuche.jpg" alt="Bild 10" />
-          <p>Vollständige Küchenmontage nach</p>
-          <p>der Renovierung der Wohnung,</p>
-          <p>einschließlich Geräten wie Ofen und Herd.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/owa.jpg')}>
-          <img src="public/Galerie/owa.jpg" alt="Bild 11" />
-          <p>Owa-Deckenmontage mit Owa-Struktur </p>
-          <p> sowie Spachtelung und Anstrich der Nebenwände.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/dach.jpg')}>
-          <img src="public/Galerie/dach.jpg" alt="Bild 12" />
-          <p>Innenausbau des Dachs mit Dämmfolie,</p>
-          <p>hochwertiger Abdichtung, Velux-Fenstern bis</p> 
-          <p>zum Dachbalken, Rigipsdecke, Spachtelung und Anstrich.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/dach 2.jpg')}>
-          <img src="public/Galerie/dach 2.jpg" alt="Bild 13" />
-          <p>GKB-Decke mit Dämmung,</p>
-          <p> Spachtelung sowie doppelte </p>
-          <p>Trockenbauunterkonstruktion.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/f90.jpg')}>
-          <img src="public/Galerie/f90.jpg" alt="Bild 14" />
-          <p>F90-Brandschutzkästen für Lüftungskanäle,</p>
-          <p>und Rohrleitungen, die dem vorbeugenden</p> 
-          <p>Brandschutz dienen und eine Feuerwiderstandsdauer </p>
-          <p>von bis zu 90 Minuten gewährleisten.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/grosse decke.jpg')}>
-          <img src="public/Galerie/grosse decke.jpg" alt="Bild 15" />
-          <p>Löchdecke mit doppelter UK-Konstruktion,</p> 
-          <p> gespachtelten Fugen und runder Lampenverstärkung.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/123.jpg')}>
-          <img src="public/Galerie/123.jpg" alt="Bild 16" />
-          <p>GKB-Decke mit einlagiger Beplankung, doppelter UK-Konstruktion,</p>
-          <p>Lampen- und Revisionsausschnitten.</p> 
-          <p>Wände gespachtelt und mit 3D-Tapeten versehen.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/haus.jpg')}>
-          <img src="public/Galerie/haus.jpg" alt="Bild 17" />
-          <p>Rigips-Deckenschrägen und seitliche Stützen</p> 
-          <p>mit Winkelmontage,gespachtelt und gestrichen.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/luxus.jpg')}>
-          <img src="public/Galerie/luxus.jpg" alt="Bild 18" />
-          <p>Elegante Lochdecke mit seitlichen Gipsstützen und</p> 
-          <p>Fugenspachtelung. Lampenausschnitte wurden</p>
-          <p>präzise integriert und die gesamte Oberfläche</p> 
-          <p>professionell gestrichen.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/skafen .jpg')}>
-          <img src="public/Galerie/skafen .jpg" alt="Bild 19" />
-          <p>Lochdecke in der Mitte, seitlich Gipsplatten mit</p> 
-          <p>originalen Kanten und Platz für Lampen integriert.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/skafen 5.jpg')}>
-          <img src="public/Galerie/skafen 5.jpg" alt="Bild 20" />
-          <p>Rigipswand mit Nischen in Schafform, sauber</p> 
-          <p> verarbeitet und ideal für Deko oder praktische Nutzung.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/skafen 2.jpg')}>
-          <img src="public/Galerie/skafen 2.jpg" alt="Bild 21" />
-          <p>Kreisförmige Rigipsdecke mit mehreren Ebenen,</p> 
-          <p>präzisen Kanten und integrierten Lampenausschnitten</p> 
-          <p>für ein modernes, dynamisches Design.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/fassaden.jpg')}>
-          <img src="public/Galerie/fassaden.jpg" alt="Bild 22" />
-          <p>Fassade mit Wärmedämmung montiert, inklusive Fensterwinkeln,</p> 
-          <p> seitlicher Armierungsgewebe, Sockelbereich und </p>
-          <p> dekorativem Putz für ein sauberes und modernes Erscheinungsbild.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/laminut.jpg')}>
-          <img src="public/Galerie/laminut.jpg" alt="Bild 23" />
-          <p>Vinyl-Laminat sauber verlegt, ergänzt durch moderne Tapete</p>
-          <p>an den Wänden. Die Oberflächen wurden sorgfältig geglättet</p>
-          <p>und geschliffen, um ein elegantes und harmonisches Design</p>
-          <p>zu gewährleisten.</p>
-        </div>
-        <div className="image-container" onClick={() => openLightbox('public/Galerie/tappeten.jpg')}>
-        <p>All diese Projekte wurden von unserer Firma realisiert, plus viele weitere wie Dachausbau, komplette Haussanierung und Gartenarbeiten. Wir stehen Ihnen gerne zur Verfügung!</p>
-        </div>
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="image-container"
+            onClick={() => openLightbox(image.src)}
+          >
+            <img src={image.src} alt={image.alt} />
+            <p>{image.text}</p>
+          </div>
+        ))}
       </div>
 
-      {/* Lightbox */}
       {lightbox && (
         <div className="lightbox" onClick={closeLightbox}>
-          <img src={currentImage} alt="Full Screen" />
+          <img src={currentImage} alt="Fullscreen" />
         </div>
       )}
     </div>

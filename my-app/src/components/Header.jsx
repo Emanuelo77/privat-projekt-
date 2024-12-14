@@ -5,7 +5,7 @@ function Header() {
     <header id="header">
       <div className="header-content">
         <div id="logo-container">
-          <img src="public/images/berbek.png" alt="Logo" className="logo-image" />
+        <img src="/images/Berbek.png" alt="Logo" className="logo-image" />
         </div>
         <div id="company-text">
           <h1>P&M Baumeister GmbH</h1>
