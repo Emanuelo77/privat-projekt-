@@ -1,81 +1,81 @@
 #leistungen h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  #leistungen p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-    margin-bottom: 30px;
-    text-align: center;
-  }
-  
-  #leistungen ul {
-    list-style: none;
-    padding: 0;
-    font-size: 16px;
-    color: #444;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  #leistungen ul li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  #leistungen {
-    padding: 40px;
-    background-color: #ffffff;
-    max-width: 1200px;
-    margin: 40px auto;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#leistungen p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#leistungen ul {
+  list-style: none;
+  padding: 0;
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#leistungen ul li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#leistungen {
+  padding: 40px;
+  background-color: #ffffff;
+  max-width: 1200px;
+  margin: 40px auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.gallery-button {
+  position: absolute; /* Poziționare absolută pentru ajustare verticală */
+  top: 1500px; /* Mută butonul mai sus */
+  left: 70%; /* Mută butonul mai spre dreapta */
+  transform: translateX(-50%); /* Asigură centrare exactă */
+  padding: 10px 15px;
+  background-color: #101110;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.gallery-button:hover {
+  background-color: #1c1d1e; /* Schimbare subtilă a culorii la hover */
+  transform: translateX(-50%) scale(1.05); /* Mărire la hover */
+}
+
+/* Stiluri pentru modul responsive */
+@media (max-width: 768px) {
   .gallery-button {
-    position: absolute; /* Poziționare absolută pentru ajustare verticală */
-    top: 1500px; /* Mută butonul mai sus */
-    left: 70%; /* Mută butonul mai spre dreapta */
-    transform: translateX(-50%); /* Asigură centrare exactă */
-    padding: 10px 15px;
-    background-color: #101110;
-    color: white;
-    font-size: 16px;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 30%; /* Buton mai lat pe dispozitive mici */
+    font-size: 14px; /* Text mai mic */
+    top: 500px; /* Mută butonul puțin mai jos în modul responsive */
+    left: 20%; /* Mută butonul spre stânga pentru mobil */
+    padding: 12px 20px;
   }
-  
-  .gallery-button:hover {
-    background-color: #1c1d1e; /* Schimbare subtilă a culorii la hover */
-    transform: translateX(-50%) scale(1.05); /* Mărire la hover */
+}
+
+
+@media (min-width: 769px) {
+  .gallery-button {
+    width: auto; /* Dimensiune implicită */
+    top: 650px; /* Poziționare pentru desktop */
+    left: 45%; /* Mută butonul puțin spre stânga pentru desktop */
+    transform: translateX(-50%); /* Asigură aliniere perfectă */
   }
-  
-  /* Stiluri pentru modul responsive */
-  @media (max-width: 768px) {
-    .gallery-button {
-      width: 30%; /* Buton mai lat pe dispozitive mici */
-      font-size: 14px; /* Text mai mic */
-      top: 430px; /* Poziționează butonul puțin mai jos pentru mobil */
-      left: 20%; /* Mută butonul spre stânga pentru mobil */
-      padding: 12px 20px;
-    }
-  }
-  
-  @media (min-width: 769px) {
-    .gallery-button {
-      width: auto; /* Dimensiune implicită */
-      top: 650px; /* Poziționare pentru desktop */
-      left: 45%; /* Mută butonul puțin spre stânga pentru desktop */
-      transform: translateX(-50%); /* Asigură aliniere perfectă */
-    }
-  }
-  
-  
+}
+

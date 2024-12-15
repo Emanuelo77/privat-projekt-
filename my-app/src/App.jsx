@@ -6,7 +6,7 @@ import WelcomeSection from './components/WelcomeSection';
 import Carousel from './components/Carousel';
 import Leistungen from './components/Leistungen';
 import Galerie from './components/Galerie';
-import AboutUs from './components/AboutUs'; // Importiere die AboutUs-Komponente
+import AboutUs from './components/AboutUs';
 import Contact from './components/Contact'; // Importiere die Contact-Komponente
 
 function App() {

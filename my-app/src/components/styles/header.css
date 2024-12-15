@@ -1,46 +1,32 @@
-/* Importul fontului */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* Header General */
 header {
   background: linear-gradient(45deg, #cfa73b, #3587bd, #efecec, #f3f0f0, #333);
-  background-size: 300% 300%;
+  background-size: 500% 500%;
   color: rgb(240, 238, 238);
   padding: 30px 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Centrare pe orizontală */
   align-items: center;
   animation: gradientAnimation 10s ease infinite;
   font-family: 'Poppins', sans-serif;
   width: 100%;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Gradient Animation */
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  position: relative; /* Permite repoziționarea logo-ului */
 }
 
 /* Container pentru logo */
 #logo-container {
-  flex: 1;
+  position: absolute;
+  left: 40px; /* Mutare puțin mai la stânga */
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 40px;
 }
 
 /* Logo Styling */
 .logo-image {
-  width: 300px;
+  width: 280px; /* Ajustare fină a dimensiunii logo-ului */
   height: auto;
   border-radius: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -48,9 +34,9 @@ header {
 
 /* Company Text Container */
 #company-text {
-  flex: 2;
+  flex: none; /* Text neinfluențat de dimensiunea logo-ului */
   max-width: 600px;
-  text-align: left;
+  text-align: center; /* Centrare text */
   color: #003366;
   line-height: 1.6;
 }
@@ -76,11 +62,13 @@ header {
   }
 
   #logo-container {
+    position: static; /* Elimină poziționarea absolută */
+    transform: none; /* Elimină transformarea */
     margin-bottom: 20px; /* Adaugă spațiu între logo și text */
   }
 
   .logo-image {
-    width: 250px; /* Dimensiune redusă pentru logo */
+    width: 200px; /* Dimensiune ajustată pentru logo pe tablete */
   }
 
   #company-text {
@@ -102,7 +90,7 @@ header {
   }
 
   .logo-image {
-    width: 200px; /* Dimensiune mai mică pentru telefoane */
+    width: 175px; /* Dimensiune mai mică pentru telefoane */
   }
 
   #company-text h1 {
